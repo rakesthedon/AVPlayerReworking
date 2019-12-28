@@ -34,7 +34,7 @@ final class VideoTableViewCell: UITableViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	func config(with viewModel: VideoPlayerViewModel) {
+	func config(with viewModel: VideoCellViewModel) {
 		playerView?.config(with: viewModel)
 		playerView?.play()
 	}

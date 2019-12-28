@@ -51,7 +51,6 @@ class VideoGalleryViewController: UITableViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath)
 		let videoCell = cell as? VideoTableViewCell
 		let item = viewModel.items(at: indexPath.row)
-		item.muted = true
 		videoCell?.config(with: item)
 		return cell
 	}
@@ -61,7 +60,7 @@ class VideoGalleryViewController: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let viewModel = self.viewModel.items(at: indexPath.row)
+		let viewModel = self.viewModel.items(at: indexPath.row).videoPlayerViewModel
 		let videoViewController = VideoViewController(viewModel: viewModel)
 		let navigationController = UINavigationController(rootViewController: videoViewController)
 		present(navigationController, animated: true)

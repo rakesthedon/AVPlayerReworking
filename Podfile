@@ -7,4 +7,5 @@ target 'AVPlayerReworking' do
 
   # Pods for AVPlayerReworking
   pod 'GoogleAds-IMA-iOS-SDK'
+	pod 'Texture'
 end

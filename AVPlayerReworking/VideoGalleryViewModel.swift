@@ -8,21 +8,38 @@
 
 import Foundation
 
-final class VideoPlayerViewModel {
+final class VideoCellViewModel {
 
 	let url: URL
-	var muted: Bool = true
+	let muted: Bool = true
+
+	var videoPlayerViewModel: VideoPlayerViewModel {
+		return VideoPlayerViewModel(url: url, muted: false, shouldDisplayAdd: true)
+	}
 
 	init(url: URL) {
 		self.url = url
 	}
 }
 
+final class VideoPlayerViewModel {
+
+	let url: URL
+	var muted: Bool
+	let shouldDisplayAdd: Bool
+
+	init(url: URL, muted: Bool, shouldDisplayAdd: Bool) {
+		self.url = url
+		self.muted = muted
+		self.shouldDisplayAdd = shouldDisplayAdd
+	}
+}
+
 final class VideoGalleryViewModel {
 
-	var didAddItem: (([VideoPlayerViewModel]) -> Void)?
+	var didAddItem: (([VideoCellViewModel]) -> Void)?
 
-	private var items: [VideoPlayerViewModel]
+	private var items: [VideoCellViewModel]
 
 	init() {
 		items = []
@@ -32,7 +49,7 @@ final class VideoGalleryViewModel {
 		return items.count
 	}
 
-	func items(at index: Int) -> VideoPlayerViewModel {
+	func items(at index: Int) -> VideoCellViewModel {
 		assert(index < items.count)
 		return items[index]
 	}
@@ -41,7 +58,7 @@ final class VideoGalleryViewModel {
 		DispatchQueue.global().async {
 			let items = VideoGalleryViewModel.loadSamples()
 			DispatchQueue.main.async { [weak self] in
-				let viewModels = items.compactMap { VideoPlayerViewModel(url: $0) }
+				let viewModels = items.compactMap { VideoCellViewModel(url: $0) }
 				self?.items.append(contentsOf: viewModels)
 				self?.didAddItem?(viewModels)
 			}

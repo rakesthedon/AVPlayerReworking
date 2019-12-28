@@ -17,6 +17,8 @@
 		8A280A5323B56644004D1E3A /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A280A5223B56644004D1E3A /* VideoTableViewCell.swift */; };
 		8A280A5623B56754004D1E3A /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A280A5523B56754004D1E3A /* VideoPlayerView.swift */; };
 		8A280A5923B57175004D1E3A /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A280A5823B57175004D1E3A /* VideoViewController.swift */; };
+		8A94EEBC23B6ADA900F0E6A8 /* VideoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A94EEBB23B6ADA900F0E6A8 /* VideoNode.swift */; };
+		8A94EEBE23B6B04700F0E6A8 /* VideoNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A94EEBD23B6B04700F0E6A8 /* VideoNodeController.swift */; };
 		CCBA266A036B3FC18489ADCD /* Pods_AVPlayerReworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027BEC62DFFAB9543A5C35B1 /* Pods_AVPlayerReworking.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		8A280A5223B56644004D1E3A /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		8A280A5523B56754004D1E3A /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		8A280A5823B57175004D1E3A /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		8A94EEBB23B6ADA900F0E6A8 /* VideoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNode.swift; sourceTree = "<group>"; };
+		8A94EEBD23B6B04700F0E6A8 /* VideoNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNodeController.swift; sourceTree = "<group>"; };
 		EA3E8D07072D83D152DF3EBA /* Pods-AVPlayerReworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerReworking.release.xcconfig"; path = "Target Support Files/Pods-AVPlayerReworking/Pods-AVPlayerReworking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				8A280A5823B57175004D1E3A /* VideoViewController.swift */,
+				8A94EEBD23B6B04700F0E6A8 /* VideoNodeController.swift */,
 				8A280A5223B56644004D1E3A /* VideoTableViewCell.swift */,
 				8A280A5523B56754004D1E3A /* VideoPlayerView.swift */,
+				8A94EEBB23B6ADA900F0E6A8 /* VideoNode.swift */,
 			);
 			path = "Video Player";
 			sourceTree = "<group>";
@@ -240,7 +246,9 @@
 				8A280A5123B55EE2004D1E3A /* VideoGalleryViewModel.swift in Sources */,
 				8A0EE18323B5965B0049E0F1 /* Notification+Extension.swift in Sources */,
 				8A280A3B23B55D19004D1E3A /* AppDelegate.swift in Sources */,
+				8A94EEBE23B6B04700F0E6A8 /* VideoNodeController.swift in Sources */,
 				8A280A5623B56754004D1E3A /* VideoPlayerView.swift in Sources */,
+				8A94EEBC23B6ADA900F0E6A8 /* VideoNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

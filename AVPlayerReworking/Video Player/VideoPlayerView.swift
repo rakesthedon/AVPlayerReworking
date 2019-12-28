@@ -17,13 +17,13 @@ final class VideoPlayerView: UIView {
 		return layer as? AVPlayerLayer
 	}
 
-	private var viewModel: VideoPlayerViewModel?
+	private var viewModel: VideoCellViewModel?
 
 	override class var layerClass: AnyClass {
 		return AVPlayerLayer.self
 	}
 
-	func config(with viewModel: VideoPlayerViewModel?) {
+	func config(with viewModel: VideoCellViewModel?) {
 		guard let viewModel = viewModel else {
 			videoLayer?.player = nil
 			player = nil
@@ -37,6 +37,8 @@ final class VideoPlayerView: UIView {
 		videoLayer?.player = player
 		self.viewModel = viewModel
 	}
+
+
 
 	func play() {
 		player?.play()
